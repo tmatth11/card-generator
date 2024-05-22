@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="icon.png">
+	</link>
+	<script src="https://kit.fontawesome.com/9ac8322a89.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="style.css">
+	<title>Pokemon Card Generator</title>
+</head>
+
+<body>
+
+	<img src="https://fontmeme.com/permalink/240329/a40aa2fd6dc6804e12a20ea0ebc0122e.png" alt="pokemon-font" id="title">
+
+	<div class="search-box">
+		<input type="text" id="poke-name" placeholder="Enter Pokemon Name">
+		<button id="make-card" onclick="fetchData()">Generate Card</button>
+	</div>
+
+	<h2 id="error">Invalid Pokemon Name.</h2>
+
+	<div class="card-container">
+		<div id="row">
+			<h2 id="poke-head"></h2>
+			<button id="cry-btn" onclick="playCry()"><i class="fa-regular fa-circle-play"></i></button>
+		</div>
+		<img src="" alt="Pokemon Sprite" id="poke-sprite" style="display: none">
+		<div class="types"></div>
+		<div class="stats">
+			<div>
+				<h3 id="attack"></h3>
+				<p>Attack</p>
+			</div>
+			<div>
+				<h3 id="defense"></h3>
+				<p>Defense</p>
+			</div>
+			<div>
+				<h3 id="speed"></h3>
+				<p>Speed</p>
+			</div>
+		</div>
+	</div>
+
+	<!-- Script -->
+	<script src="script.js"></script>
+</body>
+
+</html>

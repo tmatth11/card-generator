@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Pokemon Classic";
+    src: url(font.ttf);
+}
+
+body {
+    min-height: 100vh;
+    background-color: #eff3ff;
+    font-family: "Pokemon Classic", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#title {
+    width: 600px;
+    display: block;
+    margin: 0 auto;
+    padding-top: 50px;
+    text-align: center;
+}
+
+/* Search Box */
+.search-box {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+#poke-name {
+    padding: 10px;
+    font-size: 1.2rem;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+.search-box button {
+    padding: 10px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 4px;
+    margin-left: 10px;
+    background-color: hsl(213, 68%, 56%);
+    color: hsl(48, 93%, 58%);
+    cursor: pointer;
+}
+
+.search-box button:hover {
+    background-color: hsl(213, 68%, 46%);
+    color: hsl(48, 93%, 48%);
+}
+
+.search-box button:active {
+    background-color: hsl(213, 68%, 36%);
+    color: hsl(48, 93%, 28%);
+}
+
+#error {
+    display: none;
+    color: #ff0000; 
+    font-size: 1.5em; 
+    font-weight: bold; 
+    text-align: center; 
+    margin-top: 20px; 
+}
+
+/* Pokemon Card */
+.card-container {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem 0;
+    width: 540px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+#row {
+    display: flex;
+}
+
+#poke-head {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+#cry-btn {
+    margin-left: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: hsl(48, 93%, 28%);
+}
+
+#poke-sprite {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+}
+
+.types span {
+    font-size: 12px;
+    letter-spacing: 0.4px;
+    font-weight: 600;
+    padding: 5px 20px;
+    margin-right: 5px;
+    border-radius: 20px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.stats {
+    display: flex;
+    padding: 5px 10px;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.stats div {
+    margin: 20px 10px;
+}
+
+/* Media Query */
+@media only screen and (max-width: 600px) {
+    #title {
+        width: 90%;
+        padding-top: 20px;
+    }
+
+    .search-box {
+        flex-direction: column;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .search-box input[type="text"], .search-box button {
+        margin-top: 10px;
+    }
+
+    .card-container {
+        width: 340px;
+    }
+
+    #row {
+        flex-direction: column;
+    }
+}
